@@ -1,0 +1,92 @@
+#General parameters
+π_H: 2.5 #Hydrogen price €/kg
+delta_t: 1 #timestep h
+nTimesteps: 24 # number of timesteps per representative day
+T_a: 293 #atmosphere temperature K
+R: 8.314 #gas constant J/(mol K)
+M_H2: 0.002016 #Molar mass H2 kg/mol
+
+M: 10000000 #A very large number
+η_EH: 0.95 #efficiency of the electrical heater
+
+#Electrolyser parameters
+F: 96485.3 #Faraday constant sA/mol
+# n_c: 3800 #Number of cells
+# C_h: 330600000 #Electrolyser heat capacity J/K (=87000*3800)
+# R_t: 0.0000314 #Thermal resistance K/W
+cp_H2O: 4184 #J/(kg*K) specific heat capacity of water
+cp_steam: 2147 #J/(kg*K) specific heat capacity of steam
+M_H2O: 0.01801528 #kg/mol molar weight water
+M_H2: 0.002016 #kg/mol molar weight hydrogen
+delta_H: 40650 #J/mol heat of vaporization water MOET IN HET VERSLAG IN J/kg!!!!!
+
+# AWE
+iMinAWE: 1000  #Minimal current density A/m²
+iMaxAWE: 4000 #Maximal current density A/m²
+U_tnAWE: 1.4813 #Thermonteutral voltage V (paper 95)
+T_sAWE: 363 #Normal working temperature K
+C_HSAWE: 10 #Estimated hot start cost €
+C_CSAWE: 96 #Estimated cold start cost €
+# T_0AWE: 313 #Initial temperature of electrolyser K
+C_hAWE: 264810000 # J/K Electrolyser heat capacity 
+# R_tAWE: 0.0001133 #K/W Thermal resistance
+R_tAWE: 0.00009133 #K/W Thermal resistance
+n_cAWE: 8827 #Number of cells
+TminAWE: 313 #K Minimal operating temperature
+SUTimeAWE: 600 #s Hot start up time 
+
+# SOEC
+iMinSOEC: 2000  #Minimal current density A/m²
+iMaxSOEC: 10000 #Maximal current density A/m²
+U_tnSOEC: 1.2955 #Thermonteutral voltage V (paper 73)
+T_sSOEC: 1273 #Normal working temperature K
+C_HSSOEC: 0 #Estimated hot start cost €
+# T_0SOEC: 1073 #Initial temperature of electrolyser K
+C_hSOEC: 173280000 # J/K Electrolyser heat capacity 
+# R_tSOEC: 0.00325 #K/W Thermal resistance
+R_tSOEC: 0.0013067 #K/W Thermal resistance
+n_cSOEC: 5776 #Number of cells
+TminSOEC: 1073 #K Minimal operating temperature
+
+
+# PEM
+iMinPEM: 1500  #Minimal current density A/m²
+iMaxPEM: 20000 #Maximal current density A/m²
+U_tnPEM: 1.4813 #Thermonteutral voltage V (paper 66)
+T_sPEM: 373 #Normal working temperature K
+C_HSPEM: 0 #Estimated hot start cost €
+C_CSPEM: 98 #Estimated cold start cost €
+T_0PEM: 293 #Initial temperature of electrolyser K
+C_hPEM: 45960000 # J/K Electrolyser heat capacity 
+R_tPEM: 0.00010666 #K/W Thermal resistance
+n_cPEM: 1532 #Number of cells
+TminPEM: 293 #K Minimal operating temperature
+SUTimePEM: 600 #s Cold start up time 
+
+
+
+#Compressor parameters
+η_c: 0.75 #Mechanical efficiency
+P_in: 100000 #Inlet pressure Pa
+P_out: 35000000 #Outlet pressure Pa
+gamma: 1.4 #Adiabatic coefficient
+p_rc: 210000 #Rated compressor power W
+T_in: 363.15 #Inlet temperature K
+
+#Hydrogen storage 
+M_tank: 5000000000 #Tank size kg
+SOCMax: 0.9 #Maximal state of charge (percentage of tank size)
+SOCMin: 0.05 #Minimal state of charge (percentage of tank size)
+SOC_ini: 0.8 #Initial SOC
+
+#Transmission capacity
+p_uMin: -20000000 #Lower bound transmission capacity W
+p_uMax: 20000000 #Upper bound transmission capacity W
+
+#Nuclear powerplant parameters
+p_N: 20000000 #Electrical power = 1GW expressed in W here
+    #voorlopig op 20MW gezet omdat probleem anders infeasible wordt als hier een te grote waarde wordt gekozen
+η_turb: 0.45 #efficiency steam turbine
+
+
+delta_T: 40 #°C minimal temperature difference over regeneration heat exchanger at high temperatures
